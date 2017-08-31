@@ -1,12 +1,12 @@
 {
-  "name": "react-calendar-heatmap",
-  "version": "1.2.1",
-  "description": "A calendar heatmap component built on SVG, inspired by github's commit calendar graph.",
-  "author": "Kevin Qi <iqnivek@gmail.com>",
+  "name": "react-calendar-trends",
+  "version": "1.0.0",
+  "description": "A calendar heatmap component built on SVG, inspired by github's commit calendar graph, forked from patientslikeme/react-calendar-heatmap.",
+  "author": "Arvind Kumar C <arvindkumar.c@gmail.com>",
   "main": "./build/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/patientslikeme/react-calendar-heatmap.git"
+    "url": "https://github.com/arvindkumarc/react-calendar-heatmap.git"
   },
   "license": "MIT",
   "keywords": [
