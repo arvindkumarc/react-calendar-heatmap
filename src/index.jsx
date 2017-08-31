@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import range from 'lodash.range';
 import reduce from 'lodash.reduce';
+import {Tooltip,OverlayTrigger} from 'react-bootstrap';
 import { DAYS_IN_WEEK, MILLISECONDS_IN_ONE_DAY, MONTH_LABELS } from './constants';
 import { shiftDate, getBeginningTimeForDate, convertToDate } from './dateHelpers';
 
@@ -187,19 +188,18 @@ class CalendarHeatmap extends React.Component {
     const [x, y] = this.getSquareCoordinates(dayIndex);
     const value = this.getValueForIndex(index);
     const rect = (
-      <rect
-        key={index}
-        width={SQUARE_SIZE}
-        height={SQUARE_SIZE}
-        x={x}
-        y={y}
-        title={this.getTitleForIndex(index)}
-        className={this.getClassNameForIndex(index)}
-        onClick={this.handleClick.bind(this, value)}
-        onMouseOver={(e) => this.props.handleMouseOver ? this.props.handleMouseOver(e, value) : null}
-        onMouseLeave={(e) => this.props.handleMouseLeave ? this.props.handleMouseLeave(e, value) : null}
-        {...this.getTooltipDataAttrsForIndex(index)}
-      />
+      <OverlayTrigger key={`tip-${index}`} placement="top" overlay={<Tooltip id="tooltip">{this.getTitleForIndex(index)}</Tooltip>}>
+        <rect
+          key={index}
+          width={SQUARE_SIZE}
+          height={SQUARE_SIZE}
+          x={x}
+          y={y}
+          title={this.getTitleForIndex(index)}
+          className={this.getClassNameForIndex(index)}
+          onClick={this.handleClick.bind(this, value)}
+        />
+      </OverlayTrigger>
     );
     const transformDayElement = this.props.transformDayElement;
     return transformDayElement ? transformDayElement(rect, value, index) : rect;
