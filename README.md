@@ -58,6 +58,9 @@ To use the color scale shown in the [live demo](http://patientslikeme.github.io/
     }
     return `color-scale-${value.count}`;
   }}
+  handleMouseOver={(e) => {}}
+  handleMouseLeave={(e) => {}}
+
 />
 ```
 
