@@ -12,7 +12,7 @@ A calendar heatmap component built on SVG, inspired by github's commit calendar 
 Install the npm module:
 
 ```bash
-npm install react-calendar-heatmap
+npm install react-calendar-trends
 ```
 
 Include the default styles into your CSS by copying [src/styles.css](src/styles.css) into your repo, and customize away!
@@ -22,13 +22,13 @@ Include the default styles into your CSS by copying [src/styles.css](src/styles.
 Import the component:
 
 ```javascript
-import CalendarHeatmap from 'react-calendar-heatmap';
+import CalendarTrends from 'react-calendar-trends';
 ```
 
 To show a basic heatmap of 100 days ending on April 1st:
 
 ```javascript
-<CalendarHeatmap
+<CalendarTrends
   endDate={new Date('2016-04-01')}
   numDays={100}
   values={[
@@ -45,7 +45,7 @@ To show a basic heatmap of 100 days ending on April 1st:
 To use the color scale shown in the [live demo](http://patientslikeme.github.io/react-calendar-heatmap/) based on the github contribution graph, you can set the `classForValue` prop, a function that determines which CSS class to apply to each value:
 
 ```javascript
-<CalendarHeatmap
+<CalendarTrends
   values={[
     { date: '2016-01-01', count: 1 },
     { date: '2016-01-03', count: 4 },

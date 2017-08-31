@@ -1,6 +1,6 @@
 {
   "name": "react-calendar-trends",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A calendar heatmap component built on SVG, inspired by github's commit calendar graph, forked from patientslikeme/react-calendar-heatmap.",
   "author": "Arvind Kumar C <arvindkumar.c@gmail.com>",
   "main": "./build/index.js",
