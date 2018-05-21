@@ -13,3 +13,11 @@ export function getBeginningTimeForDate(date) {
 export function convertToDate(obj) {
   return (obj instanceof Date) ? obj : (new Date(obj));
 }
+
+export function dateNDaysAgo(numDaysAgo) {
+  return shiftDate(new Date(), -numDaysAgo);
+}
+
+export function getRange(count) {
+  return Array.from({ length: count }, (_, i) => i);
+}
